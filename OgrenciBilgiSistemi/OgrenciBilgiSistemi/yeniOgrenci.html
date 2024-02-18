@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Yeni Öğrenci Ekle</title>
+    </head>
+    <body>
+        <h1>Yeni Öğrenci Ekle</h1>
+        <form id="studentForm" action="https://localhost:7250/api/Students"
+            method="post">
+            <!-- Form alanları buraya eklenecek -->
+            <div>
+                <input type="text" name="Name" placeholder="Öğrenci Adı">
+            </div>
+            <div>
+                <input type="text" name="Surname" placeholder="Öğrenci Soyadı">
+            </div>
+            <div>
+                <input type="text" name="Email" placeholder="Öğrenci Email">
+            </div>
+            <div>
+                <input type="text" name="Phone" placeholder="Telefon">
+            </div>
+            <div>
+                <textarea name="Address" id="Address" cols="30" rows="10"
+                    placeholder="Öğrenci Adres"></textarea>
+            </div>
+            <div>
+
+                <input type="text" name="StudentClass"
+                    placeholder="Öğrenci Sınıfı">
+            </div>
+            <div>
+                <input type="text" name="City" placeholder="Öğrenci Şehri">
+            </div>
+            <button type="submit">Öğrenci Ekle</button>
+        </form>
+    </body>
+</html>

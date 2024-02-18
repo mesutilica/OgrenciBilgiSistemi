@@ -16,7 +16,15 @@ namespace OgrenciBilgiSistemi
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
             builder.Services.AddDbContext<DatabaseContext>();
-            builder.Services.AddCors();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("default", policy =>
+                {
+                    policy.WithOrigins("http://127.0.0.1:5500") // server a istek atabilecek uygulama adresi
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.
@@ -30,6 +38,7 @@ namespace OgrenciBilgiSistemi
 
             app.UseAuthorization();
 
+            app.UseCors("default");
 
             app.MapControllers();
 
