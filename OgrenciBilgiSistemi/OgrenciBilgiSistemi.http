@@ -1,0 +1,6 @@
+@OgrenciBilgiSistemi_HostAddress = http://localhost:5147
+
+GET {{OgrenciBilgiSistemi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
