@@ -36,7 +36,7 @@ namespace OgrenciBilgiSistemi.Controllers
 
         // POST api/<StudentsController>
         [HttpPost]
-        public IActionResult Post([FromForm] Student value)
+        public IActionResult Post([FromBody] Student value) // FromForm
         {
             _context.Students.Add(value);
             _context.SaveChanges();
